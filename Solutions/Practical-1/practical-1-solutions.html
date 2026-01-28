@@ -490,7 +490,7 @@ in a primary case and the onset of symptoms in secondary cases)</p></li>
 from the UKHSA data dashboard <a href="https://ukhsa-dashboard.data.gov.uk/covid-19-archive-data-download">https://ukhsa-dashboard.data.gov.uk/covid-19-archive-data-download</a></p></li>
 <li><p>Given the size of the data, a pre-processed version of the
 relevant case data has been prepared for you and can be read into R
-directly using the link: <a href="https://raw.githubusercontent.com/joetsui1994/Mbiol-2025/refs/heads/main/Data/nation_newCasesBySpecimenDate.csv?token=GHSAT0AAAAAAC3CKZH2T5AUYBRBGB7OGXZKZ4MJ36Q">https://raw.githubusercontent.com/joetsui1994/Mbiol-2025/refs/heads/main/Data/nation_newCasesBySpecimenDate.csv?token=GHSAT0AAAAAAC3CKZH2T5AUYBRBGB7OGXZKZ4MJ36Q</a></p></li>
+directly using the link: <a href="https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2025/refs/heads/main/Data/nation_newCasesBySpecimenDate.csv">https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2025/refs/heads/main/Data/nation_newCasesBySpecimenDate.csv</a></p></li>
 <li><p>Make sure that you understand the structure of the data and the
 variables it contains.</p></li>
 <li><p>For this practical we are only interested in cases in England
@@ -572,11 +572,11 @@ incidence attributed to each variant using lineage proportion estimates
 from genomic surveillance data. In this example, we will use publically
 available data from the Sanger Institute which can be inspected here (<a href="https://covid19.sanger.ac.uk/lineages/raw" class="uri">https://covid19.sanger.ac.uk/lineages/raw</a>). A
 pre-processed version of this data has already been prepared for you and
-can be read into R directly using the below link: <a href="https://raw.githubusercontent.com/joetsui1994/Mbiol-2025/refs/heads/main/Data/daily_lineage_freqs.csv?token=GHSAT0AAAAAAC3CKZH2ODFLVPPLQBQJR22MZ4MJ4OA">https://raw.githubusercontent.com/joetsui1994/Mbiol-2025/refs/heads/main/Data/daily_lineage_freqs.csv?token=GHSAT0AAAAAAC3CKZH2ODFLVPPLQBQJR22MZ4MJ4OA</a>,
+can be read into R directly using the below link: <a href="https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2025/refs/heads/main/Data/daily_lineage_freqs.csv">https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2025/refs/heads/main/Data/daily_lineage_freqs.csv</a>,
 following a similar procedure as in Q4.</p>
 <p>Visualise the data and describe in your own words (ca. 10
 minutes).</p>
-<pre class="r"><code>lineage_freqs.df &lt;- read.csv(&#39;https://raw.githubusercontent.com/joetsui1994/Mbiol-2025/refs/heads/main/Data/daily_lineage_freqs.csv?token=GHSAT0AAAAAAC3CKZH2ODFLVPPLQBQJR22MZ4MJ4OA&#39;) %&gt;%
+<pre class="r"><code>lineage_freqs.df &lt;- read.csv(&#39;https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2025/refs/heads/main/Data/daily_lineage_freqs.csv&#39;) %&gt;%
   mutate(date=as.Date(date))
 ggplot() +
   geom_line(dat=lineage_freqs.df, aes(x=date, y=proportion, color=VOC)) +
@@ -690,13 +690,13 @@ analyses that make use of such data here: <a href="https://www.science.org/doi/1
 al.</a> and <a href="https://www.science.org/doi/10.1126/science.adg6605">Tsui et
 al.</a>]. A dataset containing the proportion of Omicron cases that were
 imported on each day is available for you and can be read into R
-directly by copying and pasting the link: <a href="https://raw.githubusercontent.com/joetsui1994/Mbiol-2025/refs/heads/main/Data/daily_import_proportions.csv?token=GHSAT0AAAAAAC3CKZH23WZJ5IKM5ZWGVXLGZ4MJ5AQ">https://raw.githubusercontent.com/joetsui1994/Mbiol-2025/refs/heads/main/Data/daily_import_proportions.csv?token=GHSAT0AAAAAAC3CKZH23WZJ5IKM5ZWGVXLGZ4MJ5AQ</a>
+directly by copying and pasting the link: <a href="https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2025/refs/heads/main/Data/daily_import_proportions.csv">https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2025/refs/heads/main/Data/daily_import_proportions.csv</a>
 as you did in Q8. We can use this information to account for case
 importation in our Rt estimates.</p>
 <p>Use the data to estimate the number of Omicron cases that were
 local/imported on each day. Visualise the results and describe what you
 see. Can you explain the patterns? (ca. 15 minutes)</p>
-<pre class="r"><code>import.proportion.df &lt;- read.csv(&#39;https://raw.githubusercontent.com/joetsui1994/Mbiol-2025/refs/heads/main/Data/daily_import_proportions.csv?token=GHSAT0AAAAAAC3CKZH23WZJ5IKM5ZWGVXLGZ4MJ5AQ&#39;) %&gt;%
+<pre class="r"><code>import.proportion.df &lt;- read.csv(&#39;https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2025/refs/heads/main/Data/daily_import_proportions.csv&#39;) %&gt;%
   mutate(date=as.Date(date))
 
 adjusted.incidence.df &lt;- omicron.incidence.df %&gt;%
