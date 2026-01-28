@@ -49,7 +49,7 @@ And here you will find a figure describing the [continuous diffusion of Aedes al
 
 #### Q2: Plot the coordinates and infection status (0 for uninfected, 1 for infected, with different colours for the timing of infection) of a fungal rust pathogen (see picture below) on the Filipendula ulmaria wild plant. Summarise the data (number of infected locations in 1994, 1995 and how many remained uninfected).
 
-![Plant Infected With Rust](https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2026/refs/heads/main/Figures/plant_with_rust.png)
+![Plant Infected With Rust](https://github.com/kraemer-lab/Mbiol-Practical-2026/blob/main/Figures/plant_with_rust.png?raw=true)
 
 Context: Triphragmium ulmariae is a species of rust fungus in the family Sphaerophragmiaceae. It causes meadowsweet rust gall which develops as a chemically induced swelling, arising from the lower surface of the Filipendula ulmaria leaves. It has implications for the survival of the meadowsweet seedlings.
 
