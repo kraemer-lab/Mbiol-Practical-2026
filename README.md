@@ -1,14 +1,14 @@
-# Mbiol-2025 Practical on Epidemiological surveillance and modelling as part of Year 2 Genomics and Host-microbe Interactions.
+# Mbiol-2026 Practical on Epidemiological surveillance and modelling as part of Year 2 Genomics and Host-microbe Interactions.
 
 Practical I: Epidemiological surveillance and modelling(non-spatial) - handouts are available in this repository.
 
-Dates: January 30th/31st, 14:00-17:00, Computer Suite, South Parks Road
+Dates: January 29th/30th, 14:00-17:00, Life and Mind Building, South Parks Road
 
 In this first practical the student is expected to learn about epidemiological case count data and standard techniques to visualise and analyse them. The student will learn estimating the time-varying reproduction number (Rt) using the R-package ‘EpiEstim’. Further, the student is expected to reflect on the issues these data present and provide a perspective on how to improve disease surveillance in order to better estimate epidemiological parameters in the future. Students may also learn about the evolution of variant replacement and genetic viral diversity in the bonus question.
 
 Practical II: Epidemiological surveillance and modelling (spatial) - handouts are available in this repository.
 
-Dates: February 3rd/4th, 14:00-17:00, Computer Suite, South Parks Road
+Dates: February 2nd/3rd, 14:00-17:00, Life and Mind Building, South Parks Road
 
 Pathogens move between different geographical units because of movements of animals or humans or other hosts. Spatial patterns of infectious disease transmission arise from heterogeneity in the landscape in which transmission occurs. In large and dense cities for example transmission intensity tends to be higher compared to rural areas. Spatial dispersal in ecology and epidemiology is often approximated by an exponential (probability of dispersal at a distance follows  dispersal ∝ exp(-d/ɑ), where ɑ is the range, or Gaussian kernel (dispersal ∝ exp(-(d/ɑ)2).
  
