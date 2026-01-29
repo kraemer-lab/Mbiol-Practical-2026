@@ -394,16 +394,19 @@ Volume 178, Issue 9, 1 November 2013, Pages 1505–1512, <a href="https://doi.or
 <div id="q4-downloading-national-covid-19-cases-data-england." class="section level4">
 <h4>Q4: Downloading national COVID-19 cases data (England).</h4>
 <ul>
-<li><p>Historical data related to COVID-19 in the UK can be downloaded
-from the UKHSA data dashboard <a href="https://ukhsa-dashboard.data.gov.uk/covid-19-archive-data-download">https://ukhsa-dashboard.data.gov.uk/covid-19-archive-data-download</a></p></li>
-<li><p>Given the size of the data, a pre-processed version of the
-relevant case data has been prepared for you and can be read into R
-directly using the link: <a href="https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2026/refs/heads/main/Data/nation_newCasesBySpecimenDate.csv">https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2026/refs/heads/main/Data/nation_newCasesBySpecimenDate.csv</a></p></li>
-<li><p>Make sure that you understand the structure of the data and the
-variables it contains.</p></li>
-<li><p>For this practical we are only interested in cases in England
+<li>Historical data related to COVID-19 in the UK can be downloaded from
+the UKHSA data dashboard <a href="https://ukhsa-dashboard.data.gov.uk/covid-19-archive-data-download">https://ukhsa-dashboard.data.gov.uk/covid-19-archive-data-download</a></li>
+<li>Given the size of the data, a pre-processed version of the relevant
+case data has been prepared for you and can be read into R directly
+using the link: <a href="https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2026/refs/heads/main/Data/nation_newCasesBySpecimenDate.csv">https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2026/refs/heads/main/Data/nation_newCasesBySpecimenDate.csv</a></li>
+<li>Make sure that you understand the structure of the data and the
+variables it contains.</li>
+</ul>
+<pre class="r"><code>dat &lt;- read.csv(&quot;https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2026/refs/heads/main/Data/nation_newCasesBySpecimenDate.csv&quot;)</code></pre>
+<ul>
+<li>For this practical we are only interested in cases in England
 between 1st October 2021 and 31st December 2021. So restrict your dates
-and sort them from October to December 2021:</p></li>
+and sort them from October to December 2021:</li>
 </ul>
 <pre class="r"><code>dat &lt;- dat %&gt;%
   mutate(date = as.Date(date)) %&gt;%

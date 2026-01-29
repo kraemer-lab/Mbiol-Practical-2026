@@ -40,7 +40,7 @@ library(incidence)
 -   Given the size of the data, a pre-processed version of the relevant case data has been prepared for you and can be read into R directly using the link: [https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2026/refs/heads/main/Data/nation_newCasesBySpecimenDate.csv](https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2026/refs/heads/main/Data/nation_newCasesBySpecimenDate.csv)
 -   Make sure that you understand the structure of the data and the variables it contains.
 
-```{r, echo = FALSE}
+```{r, echo = TRUE}
 dat <- read.csv("https://raw.githubusercontent.com/kraemer-lab/Mbiol-Practical-2026/refs/heads/main/Data/nation_newCasesBySpecimenDate.csv")
 ```
 
